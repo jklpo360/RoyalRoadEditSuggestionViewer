@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Edit Suggestions</title>
+        <style>
+            * {
+                margin: 0; 
+                padding: 0;
+            }
+            body {
+                overflow: hidden;
+                margin: 0px;
+            }
+            div#banner { 
+                container-type: size;
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                background-color: #3479f4; 
+                width: 100%; 
+                height: 10%;
+            }
+            div#banner-content { 
+                font-size: 5vh;
+                margin: 0 0; 
+                padding-left: 2.5%; 
+                padding-top: calc(2.25vh);
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                text-shadow: 2px 2px 1px black;
+            }
+            div#main-content { 
+                padding-top: 10vh;
+            }
+            /* Split the screen in half */
+            .split {
+                height: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 10vh;
+                overflow-x: hidden;
+            }
+
+            /* Control the left side */
+            .left {
+                padding-top: 10vh;
+                width: 30%;
+                left: 0;
+                background-color: grey;
+            }
+
+            /* Control the right side */
+            .right {
+                padding-top: 10vh;
+                width: 70%;
+                right: 0;
+                background-color: #dedede;
+            }
+
+            /* If you want the content centered horizontally and vertically */
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            /* Style the image inside the centered container, if needed */
+            .centered img {
+                width: 150px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="banner">
+            <div id="banner-content">
+                RoyalRoad Edit Suggestion Viewer
+            </div>
+        </div>
+        <div id="main-content">
+            <!-- file dropdown menu -->
+            <div class="split left">
+                <div class="centered">
+                    <h2>Jane Flex</h2>
+                    <p>Some text.</p>
+                </div>
+            </div>
+            <!-- viewer -->
+            <div class="split right">
+                <div class="centered">
+                    <h2>John Doe</h2>
+                    <p>Some text here too.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
